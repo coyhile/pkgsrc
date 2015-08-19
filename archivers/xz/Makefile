@@ -3,7 +3,7 @@
 DISTNAME=	xz-5.2.4
 CATEGORIES=	archivers
 MASTER_SITES=	https://tukaani.org/xz/
-EXTRACT_SUFX=	.tar.bz2
+DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tukaani.org/xz/
@@ -18,6 +18,9 @@ PKGCONFIG_OVERRIDE=	src/liblzma/liblzma.pc.in
 GCC_REQD+=		3.0
 
 CONFLICTS=	lzma-[0-9]* lzma-utils-[0-9]* lzmalib-[0-9]*
+
+do-extract:
+	${CP} -r ${FILESDIR} ${WRKSRC}
 
 .include "../../mk/compiler.mk"
 
