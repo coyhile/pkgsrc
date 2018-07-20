@@ -214,7 +214,7 @@ pre-configure:
 		--disable-dependency-tracking --without-expat		\
 		--disable-maintainer-mode				\
 		--without-iconv --without-lzo2 --without-nettle		\
-		--without-xml2 --without-lz4				\
+		--without-xml2 --without-lz4
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
 	cd ${WRKDIR}/libfetch && ${TOUCH} fetch.cat3 &&			\
