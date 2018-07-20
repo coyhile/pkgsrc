@@ -1,6 +1,6 @@
 # $NetBSD: package.mk,v 1.16 2017/08/19 00:30:19 jlam Exp $
 
-.if ${PKG_COMPRESSION} == "gzip"
+.if ${PKG_COMPRESSION} == "gzip" || ${PKG_COMPRESSION} == "none"
 PKG_SUFX?=		.tgz
 .elif ${PKG_COMPRESSION} == "bzip2"
 PKG_SUFX?=		.tbz
