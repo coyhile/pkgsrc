@@ -1,16 +1,14 @@
 # $NetBSD: package.mk,v 1.16 2017/08/19 00:30:19 jlam Exp $
 
-.if defined(PKG_SUFX)
-WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
-.  if ${PKG_SUFX} == ".tgz"
-PKG_COMPRESSION=	gzip
-.  elif ${PKG_SUFX} == ".tbz"
-PKG_COMPRESSION=	bzip2
-.  else
-WARNINGS+=		"Unsupported value for PKG_SUFX"
-.  endif
-.endif
+.if ${PKG_COMPRESSION} == "gzip"
 PKG_SUFX?=		.tgz
+.elif ${PKG_COMPRESSION} == "bzip2"
+PKG_SUFX?=		.tbz
+.elif ${PKG_COMPRESSION} == "xz"
+PKG_SUFX?=		.txz
+.else
+PKG_FAIL_REASON+=	"Unsupported value '${PKG_COMPRESSION}' for PKG_COMPRESSION"
+.endif
 FILEBASE?=		${PKGBASE}
 PKGFILE?=		${PKGREPOSITORY}/${FILEBASE}-${PKGVERSION}${PKG_SUFX}
 STAGE_PKGFILE?=		${WRKDIR}/.packages/${FILEBASE}-${PKGVERSION}${PKG_SUFX}
