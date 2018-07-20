@@ -143,13 +143,6 @@ LDFLAGS+=	-L${WRKDIR}/zlib
 CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive
 LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 
-# Only use XZ if we actually have builtin support for it. Some systems
-# install the header, but without usable library or prefer to not use
-# the system version, so give them some control.
-.  if empty(USE_BUILTIN.xz:M[Yy][Ee][Ss])
-LIBARCHIVE_CONFIGURE_ARGS+=	--without-lzma
-.  endif
-
 LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
 	${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
 LIBS+=			${LIBARCHIVE_LIBS:sh}
@@ -221,9 +214,7 @@ pre-configure:
 		--disable-dependency-tracking --without-expat		\
 		--disable-maintainer-mode				\
 		--without-iconv --without-lzo2 --without-nettle		\
-		--without-lzmadec --without-lzma			\
 		--without-xml2 --without-lz4				\
-		${LIBARCHIVE_CONFIGURE_ARGS}
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
 	cd ${WRKDIR}/libfetch && ${TOUCH} fetch.cat3 &&			\
