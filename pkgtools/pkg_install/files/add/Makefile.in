@@ -22,7 +22,7 @@ BOOTSTRAP=	@bootstrap@
 SSL_SUPPORT=	@ssl_support@
 
 .if empty(BOOTSTRAP)
-LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -lz -lfetch
+LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -llzma -lz -lfetch
 .if !empty(SSL_SUPPORT)
 LIBS+=		-lssl -lcrypto -lssp
 CPPFLAGS+=	-DHAVE_SSL
