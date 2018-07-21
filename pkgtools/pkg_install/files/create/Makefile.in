@@ -28,7 +28,7 @@ CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
 OBJS=		main.o perform.o pl.o util.o build.o
 
 .if empty(BOOTSTRAP)
-LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -llzma -lz -lfetch @LIBS@
+LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -llzma -lmd -lz -lfetch @LIBS@
 .if !empty(SSL_SUPPORT)
 LIBS+=		-lssl -lcrypto -lssp
 .endif

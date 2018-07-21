@@ -22,7 +22,7 @@ CFLAGS=		@CFLAGS@
 LDFLAGS=	@LDFLAGS@ -L../lib
 
 .if empty(BOOTSTRAP)
-LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -llzma -lz -lfetch @LIBS@
+LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -llzma -lmd -lz -lfetch @LIBS@
 .if !empty(SSL_SUPPORT)
 LIBS+=		-lssl -lcrypto -lssp
 .endif

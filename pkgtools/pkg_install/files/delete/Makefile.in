@@ -15,7 +15,7 @@ SSL_SUPPORT=	@ssl_support@
 
 CC=		@CC@
 CCLD=		$(CC)
-LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -llzma -lz -lfetch @LIBS@
+LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -llzma -lmd -lz -lfetch @LIBS@
 
 .if !empty(SSL_SUPPORT)
 LIBS+=		-lssl -lcrypto -lssp
