@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2018/07/06 15:06:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.110 2018/07/22 22:51:24 wiz Exp $
 
 DISTNAME=	Sigil-0.9.9
-PKGREVISION=	5
+PKGREVISION=	7
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sigil-Ebook/}
 GITHUB_PROJECT=	Sigil
@@ -38,7 +38,9 @@ BUILDLINK_TRANSFORM+=	l:zlib:z
 #LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-REPLACE_PYTHON+=	src/Sigil/Resource_Files/plugin_launchers/python/*.py
+REPLACE_PYTHON+=	src/Resource_Files/*/*/*/*.py
+REPLACE_PYTHON+=	src/Resource_Files/*/*/*.py
+REPLACE_PYTHON+=	src/Resource_Files/*/*.py
 
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

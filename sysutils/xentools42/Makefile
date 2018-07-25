@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.67 2018/07/03 05:03:35 adam Exp $
+# $NetBSD: Makefile,v 1.69 2018/07/24 17:29:09 maya Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools42-${VERSION}
-PKGREVISION=		27
+PKGREVISION=		28
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
@@ -26,7 +26,7 @@ BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
 DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 37 # py-xml
+PYTHON_VERSIONS_ACCEPTED=	27
 
 PKG_SYSCONFSUBDIR=	xen
 

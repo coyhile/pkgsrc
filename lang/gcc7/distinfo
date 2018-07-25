@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2018/06/17 19:50:52 maya Exp $
+$NetBSD: distinfo,v 1.11 2018/07/18 22:55:07 maya Exp $
 
 SHA1 (gcc-7.3.0.tar.xz) = 9689b9cae7b2886fdaa08449a26701f095c04e48
 RMD160 (gcc-7.3.0.tar.xz) = 31f6934a0e0c0ca84b6668110f9afdb91c1f9023
@@ -38,7 +38,7 @@ SHA1 (patch-gcc_ira.c) = aa4b8d35356201f307f568238817e870a0527542
 SHA1 (patch-gcc_lto_lto.c) = 825b632e2a7ff5777d4fbfdcf6f0ea3f64c4742b
 SHA1 (patch-gcc_symtab.c) = a84091f6892e421081546ce3ea381e771f0041db
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
-SHA1 (patch-gcc_targhooks.c) = 4d5a59523eda786e3bc241ce93110db531c78e66
+SHA1 (patch-gcc_targhooks.c) = 6268d548058b6325ead1115f78c2c17c6d786296
 SHA1 (patch-gcc_testsuite_gcc.dg_fno-clone-preserves-unused-args.c) = e3b58e623df14d01fdcdb7ae1978b1876cedf657
 SHA1 (patch-gcc_testsuite_gcc.target_i386_local.c) = a6f2f056cb742f8723d775746e0394b7ada02c37
 SHA1 (patch-gcc_testsuite_gcc.target_i386_msave-args-mov.c) = 1b48c98ea87a6e2370e6379e63f6f318bfe019d0

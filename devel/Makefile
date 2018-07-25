@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2702 2018/07/18 02:38:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2707 2018/07/24 16:25:56 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -66,6 +66,7 @@ SUBDIR+=	anjuta
 SUBDIR+=	ant-contrib
 SUBDIR+=	apache-ant
 SUBDIR+=	apache-ant15
+SUBDIR+=	apache-ant19
 SUBDIR+=	apache-ivy
 SUBDIR+=	apache-maven
 SUBDIR+=	apel
@@ -130,6 +131,7 @@ SUBDIR+=	bzr-explorer
 SUBDIR+=	bzr-gtk
 SUBDIR+=	bzr-svn
 SUBDIR+=	bzrtools
+SUBDIR+=	c++gsl
 SUBDIR+=	calltree-perl
 SUBDIR+=	capstone
 SUBDIR+=	catch
@@ -334,6 +336,7 @@ SUBDIR+=	go-cast
 SUBDIR+=	go-check
 SUBDIR+=	go-cli
 SUBDIR+=	go-cobra
+SUBDIR+=	go-colorable
 SUBDIR+=	go-consul-api
 SUBDIR+=	go-debounce
 SUBDIR+=	go-ed25519
@@ -353,6 +356,7 @@ SUBDIR+=	go-golang-lru
 SUBDIR+=	go-goorgeous
 SUBDIR+=	go-gopkgs
 SUBDIR+=	go-goptlib
+SUBDIR+=	go-goreturns
 SUBDIR+=	go-homedir
 SUBDIR+=	go-i18n
 SUBDIR+=	go-immutable-radix
@@ -2014,6 +2018,7 @@ SUBDIR+=	py-google-apputils
 SUBDIR+=	py-grako
 SUBDIR+=	py-greenlet
 SUBDIR+=	py-h5py
+SUBDIR+=	py-hamcrest
 SUBDIR+=	py-hash
 SUBDIR+=	py-hg-evolve
 SUBDIR+=	py-hg-fastimport
