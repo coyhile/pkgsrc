@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.994 2018/07/17 03:55:01 minskim Exp $
+# $NetBSD: Makefile,v 1.998 2018/07/26 16:35:51 jaapb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -27,6 +27,7 @@ SUBDIR+=	aiksaurus
 SUBDIR+=	ansifilter
 SUBDIR+=	antiword
 SUBDIR+=	artha
+SUBDIR+=	asciidir
 SUBDIR+=	asciidoc
 SUBDIR+=	aspell
 SUBDIR+=	aspell-af
@@ -726,6 +727,7 @@ SUBDIR+=	py-X
 SUBDIR+=	py-X2
 SUBDIR+=	py-acora
 SUBDIR+=	py-alabaster
+SUBDIR+=	py-antlr4
 SUBDIR+=	py-anyjson
 SUBDIR+=	py-babelfish
 SUBDIR+=	py-biplist
@@ -800,6 +802,8 @@ SUBDIR+=	py-phonenumbers
 SUBDIR+=	py-poyo
 SUBDIR+=	py-prettytable
 SUBDIR+=	py-pyaml
+SUBDIR+=	py-pybtex
+SUBDIR+=	py-pybtex-docutils
 SUBDIR+=	py-pygments
 SUBDIR+=	py-pyphen
 SUBDIR+=	py-pyquery
@@ -816,6 +820,7 @@ SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-autodoc-typehints
 SUBDIR+=	py-sphinx-rtd-theme
 SUBDIR+=	py-sphinx-theme-cloud
+SUBDIR+=	py-sphinxcontrib-bibtex
 SUBDIR+=	py-sphinxcontrib-newsfeed
 SUBDIR+=	py-sphinxcontrib-websupport
 SUBDIR+=	py-tablib
